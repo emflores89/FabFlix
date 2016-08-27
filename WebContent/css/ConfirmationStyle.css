@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+
+.title {
+    text-align: center;
+}
+
+body {
+
+	background: whitesmoke;
+
+}
+
+#status {
+	margin-top: 5em;
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    border: 2px solid black;
+    background: white;
+}

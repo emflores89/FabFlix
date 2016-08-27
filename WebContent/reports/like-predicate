@@ -1,0 +1,15 @@
+I use the LIKE predicate in my main fabflix page. I use two LIKE predicates. 
+for the search bar I use %term% for movie.titles. For example if the user
+inputs term into the search bar one of the possible query results would be
+movie.title like terminator. The second LIKE predicate I use is with the letter
+browsing 'letter%'. Which finds movie.title whose title starts with that letter or is the 
+first letter in their title. For example, user clicks on A then a possible movie result would be "A Orange Clock". 
+Since its movie title starts with A. The code were I implemented these predicates is found in SearchServlet.java.
+Where I created query based on what predicate was chosen:
+
+if(type.equals("letter"))
+		{
+			PARAM = " movies.title LIKE '" + term + "%'";
+				
+		}
+

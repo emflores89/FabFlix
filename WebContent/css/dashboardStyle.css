@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+
+nav {
+    font-size: 200%;
+    padding-right: 10px;
+    background-color: #d3d3d3;
+    text-align: center;
+}
+
+
+nav a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration:none;
+    color: #000;
+    display: inline-block;
+
+}
+
+nav a:hover:not(.active)  {
+    background-color: #555;
+    color: white;
+}
+
+nav form {
+    padding-left: 10px;
+    float: left;
+}

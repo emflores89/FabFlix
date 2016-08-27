@@ -1,0 +1,30 @@
+Connection Pooling Report    
+        
+I used connection pooling wherever there was SQL queries used.
+To find the code for connection pooling it is found in Search.java
+
+	    	Context initCtx = new InitialContext();
+	        if (initCtx == null) System.out.println ("initCtx is NULL");
+		    
+	        Context envCtx = (Context) initCtx.lookup("java:comp/env");
+	        if (envCtx == null) System.out.println ("envCtx is NULL");
+			
+		    // Look up our data source
+		    DataSource ds = (DataSource) envCtx.lookup("jdbc/moviedb");
+			
+			if (ds == null)
+				System.out.println ("ds is null.");
+				Connection connection = ds.getConnection();
+			
+			if (connection == null)
+	           System.out.println ("dbcon is null.");
+			
+	    	return connection;
+
+For the servlets that retrieve information from the database it attempts
+to retrieve a connection from the connection pool. With connection pooling,
+ cached connections will reused for future requests  without have to make a 
+ new connection each time.
+ 
+Using connection as result will decrease the time spent for getting
+query results and reduce the overhead connecting to the database from the server. 

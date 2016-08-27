@@ -1,0 +1,40 @@
+#CartInformation {
+    empty-cells: hide;
+    border: solid;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    margin-bottom: 2em;
+   
+}
+
+#msg {
+	text-align: center; 
+	color: red;
+}
+
+h2 {
+    text-align: center;
+}
+
+body{
+    background: whitesmoke;
+
+}
+
+.title {
+    text-align: center;
+}
+
+#buttonActions {
+	text-align:center;
+}
+#buttonActions input[type="submit"]{
+
+    vertical-align: 28%;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+}

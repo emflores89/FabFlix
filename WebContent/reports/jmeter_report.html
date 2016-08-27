@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: linen;
+}
+
+td {
+    border-top-style: solid;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Single-instance version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average Query Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="../img/HTTP_Threads_1.PNG" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>66</td>
+    <td>17.59</td>
+    <td>16.34</td>
+    <td>Since it is only 1 thread performing queries. The SearchServlet handles it feel with little slow down.</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="../img/HTTP_Threads_10.PNG" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>210</td>
+    <td>132.28</td>
+    <td>119.74</td>
+    <td>As the number of users/threads increase there there more delays in getting query results. Compared to single thread.</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTPS/10 threads</td>
+    <td><img src="../img/HTTPS_Threads_10.PNG" alt="Graph Results Screenshot Case 3" style="width:304px;height:228px;"></td>
+    <td>131</td>
+    <td>145.68</td>
+    <td>127.62</td>
+    <td>With HTTPS there are some changes but not noticeable compared to using HTTP.</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No prepared statements</td>
+    <td><img src="../img/HTTP_Threads_10_No_PP.PNG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>221</td>
+    <td>149.765247871</td>
+    <td>133.84</td>
+    <td>You can notice some diffrences between using prepared statements and not. Not using takes a little performance hit.</td>
+  </tr>
+  <tr>
+    <td>Case 5: HTTP/10 threads/No connection pooling</td>
+    <td><img src="../img/HTTP_Threads_10_NoConnectionPooling.PNG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>612</td>
+    <td>303.48</td>
+    <td>215.64</td>
+    <td>There is a large change compared to connection pooling. The average query time is doubled due the large performance hit of making new connections</td>
+  </tr>
+
+</table> 
+
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Scaled version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average Query Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="../img/SCALED_HTTP_Threads_1.PNG" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>65</td>
+    <td>25.54</td>
+    <td>17.83</td>
+    <td>With scaled using 1 thread there little difference compared to the single instance one.</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="../img/SCALED_HTTP_Threads_10.PNG" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>84</td>
+    <td>89.57</td>
+    <td>37.63</td>
+    <td>There is large difference compared to using single-instance. With Scaling, fabflix can handle multiple threads performing large queries</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTP/10 threads/No prepared statements</td>
+    <td><img src="../img/SCALED_HTTP_Threads_10_NO_PP.PNG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>113</td>
+    <td>63.23</td>
+    <td>56.24</td>
+    <td>There is a small performance hit not using prepared statment as seen with the higher avg. Query Time.</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No connection pooling</td>
+    <td><img src="../img/SCALED_HTTP_Threads_10_NO_POOLING.PNG" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>126</td>
+    <td>72.72</td>
+    <td>59.44</td>
+    <td>Not as large difference compared to the single-instance but somewhat noticeable with increase avg. times</td>
+  </tr>
+
+</table> 
+
+</body>
+</html>

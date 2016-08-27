@@ -1,0 +1,13 @@
+
+SAX Parser was used for parsing XML documents
+
+Optimizations used for XML_Parsing:
+	1.Caching Data - Data from XML was stored in HashMap<String,Object> where objects were either Cast.java Movie.java 
+	2.Turning off Auto-Commit - In SAX Parser.java before inserting data into the Database. I turned off Auto-Commit until
+								database processing was complete.
+	3.Using prepared Statements - Used for inserting multiple entries containing the same parameters. See SQL.java
+	
+Running the SAX parser took around 1 minute. On my computer and on AWS
+
+This was ran on a laptop with a Solid State Hard Drive.
+

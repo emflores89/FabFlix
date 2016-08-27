@@ -1,0 +1,116 @@
+
+.g-recaptcha {
+	 margin: 0 auto;
+	 width: 304px;
+}
+
+#info {
+    padding-top: 10%;
+    
+
+}
+
+body{
+    background: whitesmoke;
+  
+}
+
+
+
+legend
+{
+    border: 1px solid black;
+    padding: 2px 4px;
+    font-size: 150%;
+     text-align: center;
+    background: white;
+       border-radius:5px;
+}
+
+label {
+    display:block;
+    font-weight: bold;
+}
+
+fieldset {
+    background: white;
+    width: 400px;
+    margin:0 auto;
+    border-radius:5px;
+
+}
+
+p {
+	color:red;
+	
+}
+#mail {
+	padding-left: 24px;
+}
+
+#pass {
+	padding-left: 24px;
+}
+
+#name {
+	
+	padding-left: 24px;
+	padding-bottom: 30px;
+}
+
+#buttons {
+	text-align: center;
+	border-bottom: 1px solid grey;
+}
+
+#reg_button {
+	text-align: center;
+	margin-left:1em;
+}
+
+#reg_button input[type=submit] {
+	width:320px;
+
+}
+
+#alt {
+	padding-left:40px;
+}
+
+#alt  input[type=button]{
+	position: relative;
+	display: block;
+	background-color:#207cca;
+	border:2px solid #207cca;
+	margin-top: 1em;
+	color:#fafafa;
+	width:320px;
+	font-weight: bold;
+	height:30px;
+
+	
+}
+
+#buttons input[type=button], input[type=submit] {
+    position: relative;
+    vertical-align: 38%;
+  	padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    left:-8px;
+    margin-bottom: 2em;
+    font-weight: bold;
+    
+
+}
+
+input[type=text], input[type=password] {
+    width: 350px;
+    height:25px;
+    margin-bottom:5px;
+    border-radius:5px;
+   display:block;
+       
+}
+

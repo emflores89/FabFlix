@@ -1,0 +1,70 @@
+
+legend {
+    border: 1px solid black;
+    padding: 2px 6px;
+    font-size: 150%;
+    background: white;
+}
+
+
+body {
+    background: whitesmoke;
+
+}
+
+form {
+    text-align: center;
+    padding-top: 5%;
+}
+
+input[type=text] {
+    width: 370px;
+    margin-bottom:5px;
+}
+
+input[type=button], input[type='submit'] {
+    margin-top: 1em;
+    position: relative;
+    vertical-align: 38%;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    left:-8px;
+}
+
+fieldset {
+    background: white;
+    width: 500px;
+    text-align: center;
+    margin:auto;
+
+}
+
+label {
+    width: 4em;
+    float: left;
+    text-align: right;
+    display: block;
+    padding-left: 10px;
+    clear:left;
+
+}
+
+label[for=fname] {
+    width: auto;
+}
+
+label[for=lname] {
+    width: auto;
+
+}
+
+form p {
+    color: red;
+    font-size: 120%;
+}
+
+.title {
+    text-align: center;
+}

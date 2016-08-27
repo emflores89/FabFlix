@@ -1,0 +1,96 @@
+
+To Compile (On Windows):
+cd fabflix
+javac -d WEB-INF\classes -cp ".;WEB-INF\lib\mysql-connector-java-5.1.38-bin.jar;WEB-INF\lib\servlet-api.jar;WEB-INF\lib\javax.json-1.0.jar;WEB-INF\lib\recaptcha4j-0.0.7.jar;WEB-INF\lib\gson-2.3.1.jar" WEB-INF\sources\app\Filters\*.java WEB-INF\sources\app\Management\*.java WEB-INF\sources\app\Search\*.java WEB-INF\sources\app\Servlets\*.java
+This is if you are you using the war file I uploaded or found in the aws.
+
+Compiled War file using
+jar cvf ..\fabflix.war *
+
+Note To TA
+--------------------------------------------------
+There are some cases where you won't be able to connect to the mysql databases
+where you cannot login to the databases or restart it. As a result
+you won't able to use it without restarting the server:
+
+sudo reboot
+
+Let me know if there is a problem so I can restart my instances
+
+
+Single-Instance and Scaled Links
+-------------------------------------------
+single-instance version using the link: 
+
+​http://52.40.107.137:8080/fabflix
+
+
+scaled version using the link:
+
+http://52.40.107.137:80/fabflix
+
+
+LOG SCRIPT INFORMATION
+-------------------------------------------
+Name of the script: script.py
+
+The input file it takes is the catalina.out.log
+
+The script parses logs like this:
+06-Jun-2016 03:11:24.333 INFO [http-nio-8080-exec-2] app.Filters.TimeFilter.doFilter #### 76558427 77564770
+
+Where this part #### 76558427 77564770 contains the JDBC Time and Servlet Time
+
+To run: 
+
+python script.py /opt/tomcat/logs/catalina.2016-06-06.log
+
+
+Output:
+
+JDBC TIME: 15471814 , SEARCH SERVLET TIME: 16844733
+JDBC TIME: 17103151 , SEARCH SERVLET TIME: 19888424
+JDBC TIME: 19610291 , SEARCH SERVLET TIME: 20866185
+JDBC TIME: 28102430 , SEARCH SERVLET TIME: 29411836
+JDBC TIME: 18244568 , SEARCH SERVLET TIME: 19356033
+
+TJ (AVG JDBC): 41505585.5337
+TS (AVG SERVLET): 52955685.6798
+
+
+SERVER MASTER/SLAVE INFORMATION
+-----------------------------------------------------
+MAIN: ec2-52-40-107-137.us-west-2.compute.amazonaws.com 
+52.40.107.137
+ubuntu@ip-172-31-20-52:
+
+MASTER: ec2-52-37-107-90.us-west-2.compute.amazonaws.com 
+52.37.107.90
+ubuntu@ip-172-31-28-254
+
+SLAVE: ec2-52-11-227-82.us-west-2.compute.amazonaws.com 
+52.11.227.82
+ubuntu@ip-172-31-20-32
+
+
+
+OTHER PROJECTS INFORMATION
+-----------------------------------------------
+Compile.sh is found in source_XML_parsing and contains the following:
+
+sudo javac -cp ".:/opt/tomcat/webapps/fabflix/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar" sax/*.java 
+sudo java -cp ".:/opt/tomcat/webapps/fabflix/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar" sax.SAXParser
+
+
+There is Folder called SQL it contains a script to add_movie procedure named add_movie.sql and another
+file named cretedatabase.sql which will create a clean database with no data and loads the add_movie procedure. 
+You can use it if you like or just ignore it.
+
+
+Android App Readme:
+
+Once logged in you have press on the Search Icon to search films by their title.
+If there are results from the search you can click on them to show more information about a movie.
+
+For SQL full-text search stop_words are enabled by default. I couldn't change the file location from my.cnf in etc/mysql/
+When I did I couldn't use the mysql server again so I had to reinstall it.

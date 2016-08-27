@@ -1,0 +1,2 @@
+sudo javac -cp ".:/opt/tomcat/webapps/fabflix/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar" sax/*.java 
+sudo java -cp ".:/opt/tomcat/webapps/fabflix/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar" sax.SAXParser

@@ -1,0 +1,75 @@
+
+
+body {
+    background: whitesmoke;
+
+}
+
+#info p {
+    color: red;
+    font-size: 120%;
+}
+
+#info  {
+	padding-top:50px;
+}
+
+#info legend {
+    border: 1px solid black;
+    padding: 2px 6px;
+    font-size: 150%;
+    background: white;
+}
+
+
+#info input[type=text] {
+    width: 370px;
+    margin-bottom:5px;
+}
+
+
+#info fieldset {
+    background: white;
+    width: 500px;
+    text-align: center;
+    margin:auto;
+
+}
+
+#info label {
+    width: 4em;
+    float: left;
+    text-align: right;
+    padding-left: 10px;
+    clear:left;
+    display:inline-block;
+    width:auto;
+
+}
+
+#info [type="button"] {
+    margin-top: 1em;
+    position: relative;
+    vertical-align: 38%;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    left:-8px;
+}
+
+#info input[type="submit"] {
+    margin-top: 1em;
+    position: relative;
+    vertical-align: 38%;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    left:-8px;
+}
+
+.title {
+    text-align: center;
+}
+

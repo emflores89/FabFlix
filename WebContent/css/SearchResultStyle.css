@@ -1,0 +1,99 @@
+
+h1 {
+    text-align: center;
+}
+
+body{
+    background: whitesmoke;
+
+}
+
+.title {
+    text-align: center;
+}
+
+#movietable {
+    empty-cells: hide;
+    border: solid;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+	margin-bottom: 2em;
+	border-radius:6px;
+    -moz-border-radius:6px;
+
+}
+
+#information {
+    padding-left: 10px;
+    padding-right: 5px;
+    width: 300px;
+    height: 230px;
+}
+
+img {
+    height: 250px;
+    width: 200px;
+    padding: 5px;
+}
+
+form {
+    text-align: center;
+}
+
+#sort {
+
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#sort a:hover {
+    color: #207cca;
+}
+
+#sort a {
+	text-decoration:none;
+    color: #000;
+}
+
+.title {
+    text-align: center;
+}
+
+table input[type="button"] {
+
+    vertical-align: 37%;
+    margin-left:1em;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    
+}
+
+.carttrigger {
+	vertical-align: 37%;
+    margin-left:60px;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+}
+
+.sorting input[type="submit"] {
+	    vertical-align: 37%;
+    margin-left:1em;
+    padding:6px 10px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+	
+}
+
+
+
+
+h3 {
+	text-align:center;
+}
