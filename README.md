@@ -1,2 +1,2 @@
 # FabFlix
-Movie Database Web Application
+Movie Database Web Application - Work in Progress
